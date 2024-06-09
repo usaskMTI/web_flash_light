@@ -20,19 +20,23 @@ export default function Home() {
   };
 
   return (
-    <div className="bg-slate-800 h-screen w-screen flex items-center justify-center flex-col gap-10">
+    <div
+      className={`bg-slate-800 h-screen w-screen flex items-center justify-center flex-col gap-10 border border-emerald-300 transition-all duration-1000 ${
+        mode !== "off" ? "rounded-full" : ""
+      }`}
+    >
       <h1 className="text-2xl text-emerald-400 font-bold select-none">LumaLight</h1>
       <div>
         {mode === "off" ? (
           <Flashlight
             size="128"
-            className="text-emerald-400 border border-emerald-400 rounded p-2 hover:text-emerald-200 hover:border-emerald-200 cursor-pointer transition-all duration-300 ease-in-out"
+            className="text-emerald-400 border border-emerald-400 rounded p-2 hover:text-emerald-200 hover:border-emerald-200 cursor-pointer transition-all duration-500 ease-in-out"
             onClick={toggleFlashlight}
           />
         ) : (
           <FlashlightOff
             size="128"
-            className="text-emerald-400 border border-emerald-400 rounded p-2 hover:text-emerald-200 hover:border-emerald-200 cursor-pointer transition-all duration-300 ease-in-out"
+            className="text-emerald-400 border border-emerald-400 rounded p-2 hover:text-emerald-200 hover:border-emerald-200 cursor-pointer transition-all duration-500 ease-in-out"
             onClick={toggleFlashlight}
           />
         )}

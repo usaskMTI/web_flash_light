@@ -39,9 +39,7 @@ export const FlashlightProvider = ({ children }: { children: ReactNode }) => {
   return (
     <flashlightContext.Provider value={{ mode, setMode }}>
       <div
-        className={`h-screen w-screen flex items-center justify-center transition-all duration-300 ease-in-out ${scaleClass} ${
-          mode !== "off" ? "border-8 border-white rounded-3xl" : ""
-        }`}
+        className={`h-screen w-screen flex items-center justify-center transition-all duration-500 ease-in-out ${scaleClass}`}
       >
         {children}
       </div>
